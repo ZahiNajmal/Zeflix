@@ -1,0 +1,92 @@
+/* Navbar container */
+.navbar {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Brand/logo as button like other nav buttons */
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;               /* black text */
+  background-color: #ffcc00; /* yellow background */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.navbar-brand a:hover {
+  background-color: #000;    /* black on hover */
+  color: #ffcc00;            /* yellow text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+/* Links container */
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Make links look like buttons */
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;                /* black text */
+  background-color: #ffcc00;  /* yellow background */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect for navbar buttons */
+.nav-link:hover {
+  background-color: #000;   /* black on hover */
+  color: #ffcc00;           /* yellow text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+/* Active link styling */
+.nav-link.active {
+  background-color: #000;   /* black for active link */
+  color: #ffcc00;           /* yellow text for active */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand a {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+}
